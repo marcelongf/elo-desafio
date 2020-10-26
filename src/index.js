@@ -1,14 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import ReduxToastr from 'react-redux-toastr'
+import { Provider } from 'react-redux';
+
 import App from './App';
 import store from './app/store';
-import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+
+import './index.css';
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <div>
+        <ReduxToastr 
+          timeOut={4000}
+          newestOnTop={false}
+          preventDuplicates
+          position="top-left"
+          getState={(state) => state.toastr} // This is the default
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          progressBar
+        />
+      </div>
       <App />
     </Provider>
   </React.StrictMode>,
