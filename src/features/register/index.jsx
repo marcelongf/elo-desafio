@@ -7,6 +7,7 @@ import Form from './form';
 import { registerNewUser, validateNewUser } from './actions';
 
 import logo from './../../assets/logo.png';
+import ThemeButton from './../../common/themeButton';
 import './styles.css'
 
 const Register = () => {
@@ -28,11 +29,7 @@ const Register = () => {
         <img src={logo} className='register_logo_img' />
         <form onSubmit={e => handleSubmit(e)}>
           <Form />
-          <button
-            className={`${buttonClass}`}
-            onMouseOver={() => setButtonClass("btn btn-light")}
-            onMouseLeave={() => setButtonClass("btn btn-dark")}
-          >Registrar</button>
+          <ThemeButton>Registrar</ThemeButton>
         </form>
       </div>
     </div>

@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import { validateNewLead, registerNewLead } from './actions'
 import StringForm from './stringForm';
 import OportunityForm from './oportunityForm';
+import ThemeButton from './../../common/themeButton';
 
 import './styles.css'
 import logo from './../../assets/logo.png';
@@ -18,9 +19,6 @@ const Create = ({ }) => {
       dispatch(registerNewLead(history))
     };
   }
-
-  const [buttonClass, setButtonClass] = React.useState("btn btn-dark")
-
 
   return (
     <>
@@ -36,11 +34,9 @@ const Create = ({ }) => {
               <OportunityForm />
             </div>
           </div>
-          <button   
+          <ThemeButton   
             type="submit"
-            className={`${buttonClass}`}
-            onMouseOver={() => setButtonClass("btn btn-light")}
-            onMouseLeave={() => setButtonClass("btn btn-dark")}>Salvar</button>
+          >Salvar</ThemeButton>
         </form>
       </div>
     </>

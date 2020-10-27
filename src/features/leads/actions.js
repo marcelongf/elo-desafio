@@ -29,9 +29,10 @@ export const registerNewLead = (history) => (dispatch, getState) => {
   const formValues = get(getState(), `form.newLead.values`, {});
   const tagArray = getTags(formValues);
   const leadObj = {
+    id: Math.random(),
     ...formValues,
     tags: tagArray,
-    status: "Cliente em potencial"
+    status: 0
   }
 
   const oldList = get(getState(), `leads.list`, []);
