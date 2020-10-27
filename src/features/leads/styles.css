@@ -1,0 +1,18 @@
+.form_wrapper {
+  display: block;
+  margin-right: auto;
+  width: 40%;
+}
+
+.form_container {
+  display: block;
+  padding: 1em;
+  border: 1px black solid;
+  margin-top: 10vh;
+}
+
+.form_title{
+  display: block;
+  text-align: right;
+  color: rgba(60, 60, 60, 0.9);
+}

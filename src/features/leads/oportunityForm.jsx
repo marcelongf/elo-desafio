@@ -34,10 +34,10 @@ const OportunityForm = () => {
 
   return (
     <>
-      <table className="table table-striped">
+      <table className="table table-bordered">
         <thead>
           <tr>
-            <th>
+            <th scope="col">
               <Field
                 component="input"
                 type="checkbox"
@@ -46,6 +46,7 @@ const OportunityForm = () => {
                 onChange={(e) => { dispatch(handleAllSelectedBox(e)) }}
               />
             </th>
+            <th scope='col'></th>
           </tr>
         </thead>
         <tbody>

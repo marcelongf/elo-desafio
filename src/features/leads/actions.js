@@ -1,15 +1,14 @@
 import { get } from 'lodash';
+import { toastr } from 'react-redux-toastr';
 import { change } from 'redux-form';
 
 export const handleAllSelectedBox = (allChecked) => (dispatch, getState) => {
-  // const values = get(getState(), `form.new-lead.values`, {});
-  console.log('VALOR: ', allChecked);
-  if(!(allChecked.target.value === "true")){
+  if (!(allChecked.target.value === "true")) {
     dispatch(change('newLead', 'RPA', true));
     dispatch(change('newLead', 'Produto Digital', true));
     dispatch(change('newLead', 'Analytics', true));
     dispatch(change('newLead', 'BPM', true));
-  }else{
+  } else {
     dispatch(change('newLead', 'RPA', false));
     dispatch(change('newLead', 'Produto Digital', false));
     dispatch(change('newLead', 'Analytics', false));
@@ -26,7 +25,7 @@ export const validateNewLead = () => (dispatch, getState) => {
   ].every((item) => !!formValues[item]);
 }
 
-export const registerNewLead = () => (dispatch, getState) => {
+export const registerNewLead = (history) => (dispatch, getState) => {
   const formValues = get(getState(), `form.newLead.values`, {});
   const tagArray = getTags(formValues);
   const leadObj = {
@@ -37,8 +36,16 @@ export const registerNewLead = () => (dispatch, getState) => {
 
   const oldList = get(getState(), `leads.list`, []);
   const newList = [...oldList, leadObj];
+  try {
+    dispatch({ type: "LEADS_SET_LIST", payload: newList });
+    toastr.success('Lead cadastrado com sucesso!');
+    history.push('/');
+  } catch (error) {
+    console.log(error);
+    toastr.error('Erro ao registrar lead', 'tente novamente');
+  }
 
-  dispatch({type: "LEADS_SET_LIST", payload: newList})
+
 }
 
 const getTags = (values) => {
