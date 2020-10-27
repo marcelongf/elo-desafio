@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+
 import {reducer as toastrReducer} from 'react-redux-toastr'
+import { reducer as formReducer } from 'redux-form'
+
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
-    toastr: toastrReducer
+    toastr: toastrReducer,
+    form: formReducer,
   },
 });

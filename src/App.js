@@ -6,17 +6,18 @@ import {
   Link
 } from "react-router-dom";
 
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-
+import Register from './features/register';
+import Header from './features/header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
     <>
       <Router>
+        <Header />
         <Switch>
-          <Route path="/counter" component={Counter} />
+          <Route path="/register" component={Register} />
         </Switch>
       </Router>
     </>
