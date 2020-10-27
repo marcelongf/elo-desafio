@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import Form from './form';
 import { registerNewUser, validateNewUser } from './actions';
 
-import logo from './logo.png';
+import logo from './../../assets/logo.png';
 import './styles.css'
 
 const Register = () => {

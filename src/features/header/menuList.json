@@ -1,6 +1,8 @@
 {
   "items": [
     {"title": "Home", "path": "/"},
-    {"title": "Cadastrar-se", "path": "/register"}
+    {"title": "Cadastrar-se", "path": "/register"},
+    {"title": "Painel de Leads", "path": "panel"},
+    {"title": "Novo Lead", "path": "/create-lead"}
   ]  
 }
