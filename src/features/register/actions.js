@@ -12,7 +12,7 @@ export const registerNewUser = (history) => async (dispatch, getState) => {
   //   toastr.error('Erro ao se registrar');
   // }
   reset('register');
-  history.push('/');
+  history.push('/panel');
 }
 
 export const validateNewUser = () => (dispatch, getState) => {

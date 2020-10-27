@@ -1,3 +1,17 @@
 .panel_container{
   padding: 1em;
 }
+
+.column_dropzone{
+  height: 80vh;
+  background-color: darkgray;
+  border: 1px solid black;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.column_dropzone h3{
+  background-color: white;
+  border: 1px solid darkblue;
+  padding: 0.5em;
+}

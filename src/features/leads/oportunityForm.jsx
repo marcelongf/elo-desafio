@@ -34,7 +34,7 @@ const OportunityForm = () => {
 
   return (
     <>
-      <table className="table table-bordered">
+      <table className="table table-bordered" style={{backgroundColor: 'darkgrey'}}>
         <thead>
           <tr>
             <th scope="col">

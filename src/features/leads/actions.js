@@ -40,7 +40,7 @@ export const registerNewLead = (history) => (dispatch, getState) => {
   try {
     dispatch({ type: "LEADS_SET_LIST", payload: newList });
     toastr.success('Lead cadastrado com sucesso!');
-    history.push('/');
+    history.push('/panel');
   } catch (error) {
     console.log(error);
     toastr.error('Erro ao registrar lead', 'tente novamente');

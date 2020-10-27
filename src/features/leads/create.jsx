@@ -26,7 +26,7 @@ const Create = ({ }) => {
         <div className="form_title" ><h2>Novo Lead</h2></div>
         <img src={logo} alt="logo elogroup" style={{margin: '1em', marginBottom: '3em'}} />
         <form onSubmit={e => { e.preventDefault(); handleSubmit() }} >
-          <div style={{ display: 'flex', alignContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignContent: 'space-between', marginTop: '-1em' }}>
             <div className="form_wrapper">
               <StringForm />
             </div>
@@ -36,6 +36,7 @@ const Create = ({ }) => {
           </div>
           <ThemeButton   
             type="submit"
+            style={{marginTop: '1em'}}
           >Salvar</ThemeButton>
         </form>
       </div>

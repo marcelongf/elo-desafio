@@ -1,0 +1,9 @@
+.dnd_card {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  background-color: lightgray;
+  text-align: center;   
+  margin-bottom: 1em;
+  width: 90%;
+}

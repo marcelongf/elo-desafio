@@ -6,7 +6,7 @@ const StringForm = () => {
   const [checked, setChecked] = React.useState(true)
   return (
     <>
-      <div>
+      <div style={{width: '80%', margin: '0 auto'}}>
         <Field
           component={Input}
           name="name"
